@@ -118,10 +118,6 @@ $ tree ~/Library/VirtualBox/TFTP
 │   ├── default
 │   └── pxe.cfg
 ├── ubuntu
-│   ├── 14.04
-│   │   └── amd64
-│   │       ├── initrd.gz
-│   │       └── linux
 │   ├── 16.04
 │   │   └── amd64
 │   │       ├── initrd.gz
@@ -165,8 +161,6 @@ The `Vagrantfile` reads a data file called `nodes.yml`.  The following VMs are d
 |:---------------|:---------|:----------------|:---------------|
 | 172.28.128.101 | p0.e.int | c33s/empty      | 10min          |
 | 172.28.128.102 | p1.e.int | ubuntu/xenial64 | 3min           |
-| 172.28.128.103 | p2.e.int | ubuntu/xenial64 | 3min           |
-| 172.28.128.104 | p3.e.int | ubuntu/xenial64 | 3min           |
 
 The default setup is for the `p0.e.int` is to use the `c33s/empty` box file which will cause it to PXE boot and install like a bare metal server.  If are satisfied with the PXE menu and DebConf setup, you can replace the `c33s/empty` with the `ubuntu/xenial64` for faster testing and rebuilding the environment.
 
