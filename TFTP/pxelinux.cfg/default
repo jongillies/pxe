@@ -1,0 +1,24 @@
+DEFAULT vesamenu.c32 
+TIMEOUT 200
+ONTIMEOUT Ubuntu1604
+PROMPT 0
+MENU INCLUDE pxelinux.cfg/pxe.cfg
+NOESCAPE 1
+LABEL Ubuntu1604
+        KERNEL ubuntu/16.04/amd64/linux
+        APPEND auto=true priority=critical vga=788 initrd=ubuntu/16.04/amd64/initrd.gz netcfg/choose_interface=enp0s3 preseed/url=http://10.0.2.2/ubuntu-16.04.2-server-amd64.cfg preseed/interactive=false
+        TEXT HELP
+        Press TAB to customize kernel boot string
+        ENDTEXT
+LABEL Ubuntu1610
+        KERNEL ubuntu/16.10/amd64/linux
+        APPEND auto=true priority=critical vga=788 initrd=ubuntu/16.10/amd64/initrd.gz netcfg/choose_interface=enp0s3 preseed/url=http://10.0.2.2/ubuntu-16.10-server-amd64.cfg preseed/interactive=false
+        TEXT HELP
+        Press TAB to customize kernel boot string
+        ENDTEXT
+LABEL BootLocal
+        localboot 0
+        TEXT HELP
+        Boot to local hard disk
+        ENDTEXT
+

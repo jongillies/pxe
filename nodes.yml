@@ -1,0 +1,11 @@
+---
+- name: p0.e.int
+  ip: 172.28.128.101
+  box: c33s/empty
+  ram: 2048
+  cpus: 4
+- name: p1.e.int
+  ip: 172.28.128.102
+  box: ubuntu/xenial64
+  ram: 2048
+  cpus: 2
